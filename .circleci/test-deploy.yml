@@ -30,8 +30,8 @@ jobs:
       # Run your orb's commands to validate them.
       - set-env-var/greet
       - run :
-          name: Setting env variable
-          command: echo $ANOTHER_VAR $RANDOM_VAR $MY_ENV_VAR
+          name: printing env variable
+          command: echo "$ANOTHER_VAR $RANDOM_VAR $MY_ENV_VAR"
 
 workflows:
   test-deploy:
