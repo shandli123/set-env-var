@@ -1,13 +1,13 @@
 version: 2.1
 
 description: >
-  Sample orb description
+  This description is shown in the orb registry, this is a test orb for setting environment variables and is used in circle ci, basically a demo orb for testing environment variables.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:
-  home_url: "https://www.example.com/docs"
+  # home_url: "https://www.google.com"
   source_url: "https://github.com/shandli123/set-env-var"
 
 # If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
