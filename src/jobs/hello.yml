@@ -4,11 +4,11 @@ description: >
 
 executor: default
 
-parameters:
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
+# parameters:
+#   to:
+#     type: string
+#     default: "World"
+#     description: "Hello to whom?"
 steps:
   - greet:
-      to: << parameters.to >>
+      # to: << parameters.to >>
