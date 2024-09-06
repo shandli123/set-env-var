@@ -4,4 +4,3 @@
 export MY_ENV_VAR="Hello, World!"
 export ANOTHER_VAR="42"
 export RANDOM_VAR="foo-bar"
-source "$BASH_ENV"
