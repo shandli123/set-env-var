@@ -31,7 +31,7 @@ jobs:
       - set-env-var/greet
       - run :
           name: printing env variable
-          command: echo "$ANOTHER_VAR $RANDOM_VAR $MY_ENV_VAR"
+          command: printenv
 
 workflows:
   test-deploy:
