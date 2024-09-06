@@ -29,6 +29,10 @@ jobs:
       - checkout
       # Run your orb's commands to validate them.
       - set-env-var/greet
+      - run :
+          name: Setting env variable
+          command: echo $ANOTHER_VAR $RANDOM_VAR $MY_ENV_VAR
+
 workflows:
   test-deploy:
     jobs:
@@ -41,7 +45,7 @@ workflows:
           filters: *release-filters
       - orb-tools/publish:
           orb_name: shandlitest/set-env-var
-          vcs_type: << pipeline.project.type >>
+          vcs_type: github
           pub_type: production
           # Ensure this job requires all test jobs and the pack job.
           requires:

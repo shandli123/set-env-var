@@ -1,15 +1,15 @@
 description: >
-  This command echos "Hello World" using file inclusion.
+  This command echos "Hello World" using file inclusion. this is a long description very very very long
 # What will this command do?
 # Descriptions should be short, simple, and clear.
-parameters:
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
+# parameters:
+#   to:
+#     type: string
+#     default: "World"
+#     description: "Hello to whom?"
 steps:
   - run:
-      environment:
-        PARAM_TO: <<parameters.to>>
-      name: Hello Greeting
+      # environment:
+      #   PARAM_TO: <<parameters.to>>
+      name: Setting env variable
       command: <<include(scripts/greet.sh)>>
