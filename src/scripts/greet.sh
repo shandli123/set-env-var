@@ -5,9 +5,9 @@
 
 # Combine multiple exports in a single block and redirect to $BASH_ENV once
 {
-  echo 'export MY_ENV_VAR="Hello, World! to you"'
-  echo 'export ANOTHER_VAR="421"'
-  echo 'export RANDOM_VAR="foo-bar-bar"'
+  echo 'export MY_ENV_VAR="Hello, World!"'
+  echo 'export ANOTHER_VAR="42"'
+  echo 'export RANDOM_VAR="foo-bar"'
 } >> "$BASH_ENV"
 
 # Source the BASH_ENV file to load the environment variables
