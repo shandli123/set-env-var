@@ -15,7 +15,7 @@ STARTED_BY_UUID=$(echo "$WORKFLOW_INFO" | jq -r '.started_by')
 echo "Started By: ${STARTED_BY_UUID}"  # Print started_by for debugging
 
 # Add started_by to the environment
-echo "STARTED_BY_UUID=${STARTED_BY_UUID}" >> $BASH_ENV
+echo "STARTED_BY_UUID=${STARTED_BY_UUID}" >> "$BASH_ENV"
 
 # STARTED_BY=$(curl -s -H "Circle-Token: ${CIRCLE_TOKEN}" "https://circleci.com/api/v2/user/${STARTED_BY_UUID}")
 echo "Extracted circle token: ${CIRCLE_TOKEN}"
@@ -24,7 +24,7 @@ echo "User Info: ${STARTED_BY}"  # Print user info for debugging
 
 # Extract `name` from user info
 STARTED_BY=$(echo "$STARTED_BY" | jq -r '.name')
-echo "STARTED_BY=${STARTED_BY}" >> $BASH_ENV
+echo "STARTED_BY=${STARTED_BY}" >> "$BASH_ENV"
 echo "Extracted user name: ${STARTED_BY}"
 
 if [ "$STARTED_BY" == "qdbrowserstack@gmail.com" ]; then
