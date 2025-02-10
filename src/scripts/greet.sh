@@ -23,7 +23,7 @@ STARTED_BY=$(curl -s -H "Circle-Token: ${CIRCLE_TOKEN}" "https://circleci.com/ap
 echo "User Info: ${STARTED_BY}"  # Print user info for debugging
 
 # Extract `name` from user info
-STARTED_BY=$(echo "$STARTED_BY" | jq -r '.name')
+STARTED_BY=$(echo "$STARTED_BY" | jq -r '.login')
 echo "STARTED_BY=${STARTED_BY}" >> "$BASH_ENV"
 echo "Extracted user name: ${STARTED_BY}"
 
