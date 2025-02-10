@@ -32,6 +32,7 @@ jobs:
       - run :
           name: printing env variable
           command: printenv
+          
 
 workflows:
   test-deploy:
