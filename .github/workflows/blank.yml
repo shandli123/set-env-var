@@ -70,7 +70,38 @@ jobs:
               </details>
             </body>
           </html>" > reports/index.html 
-          echo reports/index.html  > $GITHUB_STEP_SUMMARY
+          echo ""<html>
+            <body> 
+              <details><summary>CAD Test Reorts</summary>
+                <table>
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Age</th>
+                          <th>City</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Alex Johnson</td>
+                          <td>28</td>
+                          <td>New York</td>
+                      </tr>
+                      <tr>
+                          <td>Sophia Lee</td>
+                          <td>34</td>
+                          <td>Los Angeles</td>
+                      </tr>
+                      <tr>
+                          <td>Michael Smith</td>
+                          <td>25</td>
+                          <td>Chicago</td>
+                      </tr>
+                  </tbody>
+              </table>
+              </details>
+            </body>
+          </html>"  > $GITHUB_STEP_SUMMARY
 
       - name: Upload HTML Report as Artifact
         uses: actions/upload-artifact@v4
