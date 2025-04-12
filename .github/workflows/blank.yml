@@ -39,6 +39,34 @@ jobs:
         run: |
           mkdir -p reports
           echo "<html>
+            <style>
+              table {
+                  width: 60%;
+                  border-collapse: collapse;
+                  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                  border-radius: 10px;
+                  overflow: hidden;
+                }
+    
+                th, td {
+                    padding: 15px;
+                    text-align: center;
+                }
+        
+                th {
+                    background-color: #4CAF50;
+                    color: #fff;
+                }
+        
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+        
+                tr:hover {
+                    background-color: #ddd;
+                    transition: 0.3s ease;
+                }
+            </style>
             <body> 
                 <table>
                   <thead>
