@@ -50,5 +50,5 @@ jobs:
         id: html_preview
         uses: pavi2410/html-preview-action@v4
         with:
-          html_file: reports/index.html
+          html_file: reports
           job_summary: true
