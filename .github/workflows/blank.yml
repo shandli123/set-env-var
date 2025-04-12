@@ -37,6 +37,8 @@ jobs:
       - name: create-summary
         run: |
           echo "<html><body>This is new report</body></html>" > $GITHUB_STEP_SUMMARY
+      - name: Print all GitHub environment variables
+        run: env | sort
           
   Bstack-test-report:
     needs: build
