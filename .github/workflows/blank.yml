@@ -34,3 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: HTML Preview
+        id: html_preview
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'index.html'
+          job_summary: true
