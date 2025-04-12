@@ -34,8 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: create-summary
+        run: |
+          echo "<html><body>This is new report</body></html>" > $GITHUB_STEP_SUMMARY
           
-  summary_tab:
+  Bstack-test-report:
     needs: build
     runs-on: ubuntu-latest
     
