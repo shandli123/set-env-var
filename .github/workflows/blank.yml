@@ -69,8 +69,8 @@ jobs:
               </table>
               </details>
             </body>
-          </html>" > $GITHUB_STEP_SUMMARY
-          $GITHUB_STEP_SUMMARY> reports/index.html
+          </html>" > reports/index.html 
+          reports/index.html  > $GITHUB_STEP_SUMMARY
 
       - name: Upload HTML Report as Artifact
         uses: actions/upload-artifact@v4
