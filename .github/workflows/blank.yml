@@ -35,6 +35,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
+  summary_tab:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:     
       - name: Generate fake HTML report
         run: |
           mkdir -p reports
