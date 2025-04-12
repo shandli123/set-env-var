@@ -40,6 +40,12 @@ jobs:
           mkdir -p reports
           echo "<html><body><h1>My Custom Report</h1><img src='https://via.placeholder.com/150'></body></html>" > reports/index.html
 
+      - name: Upload HTML Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: custom-html-report
+          path: reports
+
       - name: HTML Preview
         id: html_preview
         uses: pavi2410/html-preview-action@v4
